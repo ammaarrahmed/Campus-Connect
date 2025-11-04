@@ -1,0 +1,48 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user owns the document
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    // Posts collection rules
+    match /posts/{postId} {
+      // Anyone can read posts
+      allow read: if true;
+      
+      // Only authenticated users can create posts
+      allow create: if isSignedIn() 
+                    && request.resource.data.authorId == request.auth.uid;
+      
+      // Only post author can update their post
+      allow update: if isOwner(resource.data.authorId);
+      
+      // Only post author can delete their post
+      allow delete: if isOwner(resource.data.authorId);
+    }
+    
+    // Comments collection rules
+    match /comments/{commentId} {
+      // Anyone can read comments
+      allow read: if true;
+      
+      // Only authenticated users can create comments
+      allow create: if isSignedIn() 
+                    && request.resource.data.authorId == request.auth.uid;
+      
+      // Only comment author can delete their comment
+      allow delete: if isOwner(resource.data.authorId);
+      
+      // Comments cannot be updated (only create and delete)
+      allow update: if false;
+    }
+  }
+}

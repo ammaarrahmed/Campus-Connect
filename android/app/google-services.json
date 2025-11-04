@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "746751594801",
+    "project_id": "campus-reddit",
+    "storage_bucket": "campus-reddit.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746751594801:android:632bf8e3f20d551f472010",
+        "android_client_info": {
+          "package_name": "com.example.campus_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746751594801-js1dmmomel1iag4n6bs9a9ff3cb1a0b4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.campus_connect",
+            "certificate_hash": "67d0ef026a8880d988a70c8f52f42c0c79183be1"
+          }
+        },
+        {
+          "client_id": "746751594801-d81a8am6t2bi28sedef0mact4m92upo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTT_gW_lzMc_dIXBvYhweDj4hrCSv9WMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746751594801-d81a8am6t2bi28sedef0mact4m92upo5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "746751594801-2a1lnc0op57hq6gqshk4i9a5lsb78ioc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.campusConnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
