@@ -6,7 +6,18 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "05:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 3
+    groups:
+      pub-patch-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
     labels:
       - "dependencies"
       - "security"
@@ -17,7 +28,11 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "05:30"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 3
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
     labels:
       - "dependencies"
       - "ci"
