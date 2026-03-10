@@ -5,8 +5,9 @@ import '../models/user_model.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  bool _googleSignInInitialized = false;
 
   // FAST NUCES allowed email domains
   static const List<String> allowedDomains = [
@@ -80,15 +81,16 @@ class AuthService {
   // Sign in with Google (FAST NUCES only)
   Future<UserCredential?> signInWithGoogle() async {
     try {
+      if (!_googleSignInInitialized) {
+        await _googleSignIn.initialize();
+        _googleSignInInitialized = true;
+      }
+
       // Sign out first to ensure account picker shows
       await _googleSignIn.signOut();
 
       // Trigger the authentication flow
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-
-      if (googleUser == null) {
-        return null; // User cancelled
-      }
+      final GoogleSignInAccount googleUser = await _googleSignIn.authenticate();
 
       // Validate FAST NUCES email domain
       if (!_isValidFASTEmail(googleUser.email)) {
@@ -106,12 +108,14 @@ class AuthService {
       }
 
       // Obtain the auth details from the request
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth = googleUser.authentication;
+
+      if (googleAuth.idToken == null) {
+        throw 'Google Sign-In failed: missing ID token.';
+      }
 
       // Create a new credential
       final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
