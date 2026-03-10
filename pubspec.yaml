@@ -24,12 +24,12 @@ dependencies:
   flutter_animate: ^4.5.0
   
   # Image Handling
-  image_picker: ^1.1.2
+  image_picker: ^1.2.1
   image_cropper: ^11.0.0
   
   # Utilities
   uuid: ^4.5.3
-  intl: ^0.19.0
+  intl: ^0.20.2
   cached_network_image: ^3.4.1
   http: ^1.6.0
 
