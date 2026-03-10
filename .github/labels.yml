@@ -1,0 +1,47 @@
+- name: good first issue
+  color: "7057ff"
+  description: Beginner-friendly issue with clear acceptance criteria
+
+- name: help wanted
+  color: "008672"
+  description: Maintainers welcome community help on this issue
+
+- name: bug
+  color: "d73a4a"
+  description: Something is broken or behaves incorrectly
+
+- name: enhancement
+  color: "a2eeef"
+  description: New feature or significant improvement
+
+- name: documentation
+  color: "0075ca"
+  description: Documentation-only changes
+
+- name: question
+  color: "d876e3"
+  description: Clarification or usage question
+
+- name: priority-high
+  color: "b60205"
+  description: Urgent work item
+
+- name: needs-triage
+  color: "fbca04"
+  description: Awaiting maintainer triage
+
+- name: blocked
+  color: "5319e7"
+  description: Blocked by dependency, decision, or external factor
+
+- name: security
+  color: "ee0701"
+  description: Security-sensitive issue (share minimal public details)
+
+- name: dependencies
+  color: "0366d6"
+  description: Dependency updates and maintenance
+
+- name: ci
+  color: "1d76db"
+  description: Continuous integration and automation changes

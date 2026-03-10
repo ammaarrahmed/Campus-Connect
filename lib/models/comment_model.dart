@@ -34,14 +34,18 @@ class Comment {
 
   // Create Comment from Firestore document
   factory Comment.fromMap(Map<String, dynamic> map) {
+    final createdAtRaw = map['createdAt'];
+
     return Comment(
-      id: map['id'] ?? '',
-      postId: map['postId'] ?? '',
-      content: map['content'] ?? '',
-      authorId: map['authorId'] ?? '',
-      authorName: map['authorName'] ?? 'Anonymous',
-      authorPhotoUrl: map['authorPhotoUrl'],
-      createdAt: (map['createdAt'] as Timestamp).toDate(),
+      id: map['id'] as String? ?? '',
+      postId: map['postId'] as String? ?? '',
+      content: map['content'] as String? ?? '',
+      authorId: map['authorId'] as String? ?? '',
+      authorName: map['authorName'] as String? ?? 'Anonymous',
+      authorPhotoUrl: map['authorPhotoUrl'] as String?,
+      createdAt: createdAtRaw is Timestamp
+          ? createdAtRaw.toDate()
+          : DateTime.now(),
     );
   }
 }

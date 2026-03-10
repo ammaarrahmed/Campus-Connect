@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: https://github.com/ammaarrahmed/Campus-Connect/security/advisories/new
+    about: Please report vulnerabilities privately.
+  - name: Community discussion
+    url: https://github.com/ammaarrahmed/Campus-Connect/discussions
+    about: Ask open-ended product or architecture questions.

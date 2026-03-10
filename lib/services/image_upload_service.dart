@@ -56,7 +56,7 @@ class ImageUploadService {
       if (_cloudName == 'YOUR_CLOUD_NAME' ||
           _uploadPreset == 'YOUR_UPLOAD_PRESET') {
         print('Error: Please configure Cloudinary credentials');
-        print('See CLOUDINARY_SETUP.md for instructions');
+        print('See docs/LOCAL_DEVELOPMENT.md for setup instructions');
         return null;
       }
 

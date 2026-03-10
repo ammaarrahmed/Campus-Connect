@@ -67,9 +67,6 @@ class _PostDetailScreenState extends ConsumerState<PostDetailScreen> {
     final isDownvoted =
         currentUser != null &&
         widget.post.downvotedBy.contains(currentUser.uid);
-    final isBookmarked =
-        currentUser != null &&
-        widget.post.bookmarkedBy.contains(currentUser.uid);
     final firestoreService = ref.read(firestoreServiceProvider);
     final commentsAsync = ref.watch(commentsProvider(widget.post.id));
 

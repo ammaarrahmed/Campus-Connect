@@ -1,0 +1,8 @@
+# Optional funding configuration.
+# Uncomment and replace placeholders when funding is enabled.
+
+github: []
+patreon: ""
+open_collective: ""
+ko_fi: ""
+custom: []

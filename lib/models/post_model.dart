@@ -58,21 +58,31 @@ class Post {
 
   // Create Post from Firestore document
   factory Post.fromMap(Map<String, dynamic> map) {
+    final createdAtRaw = map['createdAt'];
+
     return Post(
-      id: map['id'] ?? '',
-      title: map['title'] ?? '',
-      description: map['description'] ?? '',
-      category: map['category'] ?? '',
-      authorId: map['authorId'] ?? '',
-      authorName: map['authorName'] ?? 'Anonymous',
-      authorPhotoUrl: map['authorPhotoUrl'],
-      imageUrl: map['imageUrl'],
-      createdAt: (map['createdAt'] as Timestamp).toDate(),
-      likedBy: List<String>.from(map['likedBy'] ?? []),
-      upvotedBy: List<String>.from(map['upvotedBy'] ?? []),
-      downvotedBy: List<String>.from(map['downvotedBy'] ?? []),
-      bookmarkedBy: List<String>.from(map['bookmarkedBy'] ?? []),
-      commentCount: map['commentCount'] ?? 0,
+      id: map['id'] as String? ?? '',
+      title: map['title'] as String? ?? '',
+      description: map['description'] as String? ?? '',
+      category: map['category'] as String? ?? '',
+      authorId: map['authorId'] as String? ?? '',
+      authorName: map['authorName'] as String? ?? 'Anonymous',
+      authorPhotoUrl: map['authorPhotoUrl'] as String?,
+      imageUrl: map['imageUrl'] as String?,
+      createdAt: createdAtRaw is Timestamp
+          ? createdAtRaw.toDate()
+          : DateTime.now(),
+      likedBy: List<String>.from(map['likedBy'] as Iterable<dynamic>? ?? []),
+      upvotedBy: List<String>.from(
+        map['upvotedBy'] as Iterable<dynamic>? ?? [],
+      ),
+      downvotedBy: List<String>.from(
+        map['downvotedBy'] as Iterable<dynamic>? ?? [],
+      ),
+      bookmarkedBy: List<String>.from(
+        map['bookmarkedBy'] as Iterable<dynamic>? ?? [],
+      ),
+      commentCount: map['commentCount'] as int? ?? 0,
     );
   }
 
