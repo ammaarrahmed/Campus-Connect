@@ -25,7 +25,7 @@ dependencies:
   
   # Image Handling
   image_picker: ^1.1.2
-  image_cropper: ^8.0.2
+  image_cropper: ^11.0.0
   
   # Utilities
   uuid: ^4.3.3
