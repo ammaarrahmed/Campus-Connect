@@ -46,4 +46,7 @@ app.*.map.json
 
 # Firebase local configuration (contains API keys/client IDs)
 /android/app/google-services.json
+/android/app/src/google-services.json
+/android/app/src/**/google-services.json
+/android/app/src/**/GoogleService-Info.plist
 /ios/Runner/GoogleService-Info.plist
