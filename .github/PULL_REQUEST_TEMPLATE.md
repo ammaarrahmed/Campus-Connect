@@ -24,7 +24,7 @@ flutter test
 
 ## Checklist
 
-- [ ] I followed `CONTRIBUTING.md`
+- [ ] I followed `docs/CONTRIBUTING.md`
 - [ ] I used Conventional Commits
 - [ ] I added or updated tests when needed
 - [ ] I updated docs for behavior/setup changes

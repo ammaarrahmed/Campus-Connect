@@ -30,8 +30,8 @@ Anyone submitting issues, docs, tests, or code improvements.
 
 Responsibilities:
 
-- Follow `CONTRIBUTING.md`
-- Follow `CODE_OF_CONDUCT.md`
+- Follow `docs/CONTRIBUTING.md`
+- Follow `docs/CODE_OF_CONDUCT.md`
 - Submit focused, testable changes
 
 ## Decision-Making

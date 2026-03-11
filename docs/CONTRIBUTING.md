@@ -7,8 +7,8 @@ This project is transitioning from a personal app to a community-maintained open
 ## Before You Start
 
 - Read `README.md` for project context and architecture.
-- Read `CODE_OF_CONDUCT.md`.
-- Read `AI_USAGE_POLICY.md` if using AI tools.
+- Read `docs/CODE_OF_CONDUCT.md`.
+- Read `docs/AI_USAGE_POLICY.md` if using AI tools.
 - Check open issues labeled `good first issue` or `help wanted`.
 
 ## Development Environment Setup
@@ -195,4 +195,4 @@ Authors should:
 
 Do not report security vulnerabilities in public issues.
 
-See `SECURITY.md` for responsible disclosure instructions.
+See `docs/SECURITY.md` for responsible disclosure instructions.

@@ -5,14 +5,23 @@ Target structure for a mature Flutter open-source project:
 ```text
 campus_connect/
   lib/
+    app/
+    features/
+    shared/
     models/
     providers/
-    screens/
     services/
     utils/
-    widgets/
   test/
   docs/
+    AI_USAGE_POLICY.md
+    CHANGELOG.md
+    CODE_OF_CONDUCT.md
+    CONTRIBUTING.md
+    FEATURES.md
+    GOVERNANCE.md
+    ROADMAP.md
+    SECURITY.md
     images/
   assets/
   scripts/
@@ -20,12 +29,6 @@ campus_connect/
     ISSUE_TEMPLATE/
     workflows/
   README.md
-  CONTRIBUTING.md
-  CODE_OF_CONDUCT.md
-  SECURITY.md
-  GOVERNANCE.md
-  AI_USAGE_POLICY.md
-  CHANGELOG.md
   LICENSE
 ```
 

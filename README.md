@@ -97,10 +97,10 @@ flutter test
 
 Community contributions are welcome. Start here:
 
-- `CONTRIBUTING.md`
-- `CODE_OF_CONDUCT.md`
-- `AI_USAGE_POLICY.md`
-- `SECURITY.md`
+- `docs/CONTRIBUTING.md`
+- `docs/CODE_OF_CONDUCT.md`
+- `docs/AI_USAGE_POLICY.md`
+- `docs/SECURITY.md`
 
 ## Code Structure
 
@@ -140,7 +140,7 @@ Recommended long-term structure and conventions are documented in `docs/REPOSITO
 
 Short and mid-term product roadmap is tracked in:
 
-- `ROADMAP.md`
+- `docs/ROADMAP.md`
 - GitHub Issues with labels `enhancement`, `good first issue`, and `priority-high`
 
 Engineering architecture and standards documents are tracked in `engineering-foundation/`.
